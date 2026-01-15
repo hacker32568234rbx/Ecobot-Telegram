@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-TOKEN = "8150184243:AAH-9dOxtx0bYcFvhNPBTFt_Hx6c_AEBMv0"
+TOKEN = "TOKEN"
 bot = telebot.TeleBot(TOKEN)
 
 tips = [
@@ -117,5 +117,6 @@ def help_btn(m):
 @bot.message_handler(func=lambda m: True)
 def other(m):
     bot.send_message(m.chat.id, "я не понял. напиши: совет / факт / челлендж / сделал / счёт", reply_markup=kb())
+
 
 bot.infinity_polling()
